@@ -1,0 +1,11 @@
+<h3>Comments</h3>
+<p>
+	<b>Name:</b>
+	<%= comment.commenter %>
+</p>
+<p>
+	<pre style="font-family:arial; overflow: auto; width:30%"><%=comment.body%></pre>
+</p>
+<div style="width:30%; border-bottom: 1px solid">
+	<%= button_to 'Destroy Comment', [comment.post,comment],:confirm => 'Are you sure?', :method => :delete %>
+</div>

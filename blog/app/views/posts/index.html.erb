@@ -1,0 +1,25 @@
+
+<% @posts.each do |post| %>
+    <div style="width:60%">
+      <div>  
+        <h1><%=post.title%></h1>
+      </div>
+      <div>
+        <span>Author: </span>
+        <%=post.name%>
+      </div>
+      <div style="width:80%;max-height:20em;word-wrap: break-word">
+        <pre style="font-family:arial; overflow: auto; max-height:20em"><%=post.content%></pre>
+      </div>
+    </br>
+      <%= link_to 'Show', post %>
+      <%= link_to 'Edit', edit_post_path(post) %>
+      <%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %>
+    </div>
+  </br>
+<% end %>
+
+<br />
+<div>
+  <%= link_to 'New Post', new_post_path %>
+</div>

@@ -1,0 +1,12 @@
+<%= form_for([@post, @post.comments.build]) do |f| %>
+  <div class="field">
+    <span>Name</span><br />
+    <%= f.text_field :commenter %>
+  </div>
+  <div class="field">
+    <%= f.text_area :body, :id=>"commentfield"%>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
