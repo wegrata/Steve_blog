@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Steve's Blog Project</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= stylesheet_link_tag    "bootstrap", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body style="margin-left:5em; margin-right:5em; background:#EEEEEE;">
+<div class="navbar rounded-corners" style="width 100%;text-align:center ;height:5em">
+	<h3 style="text-decoration: None; font-size:3em; padding-top:15px">Blog Project</h3>
+</div>
+<%= yield %>
+</body>
+</html>
